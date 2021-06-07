@@ -65,16 +65,12 @@
 		],
 		"stateMutability": "view",
 		"type": "function"
-	}
-]);
+    }],"0xABf76459e0643A8678117EA666eaE4a21A409442");
 
-        // Get the contract abi
-        var myMessage = RemixContract.at('0x2B228A5c63b301B53196d6a2408BD6AEdA7b2F67');
-
-        console.log(myMessage);
+        console.log(RemixContract);
 
         $("#setMessageButton").click(function () {
-            myMessage.setMessage($("#userInput").val());
+            RemixContract.methods.setMessage($("#userInput").val());
             console.log($("#userInput").val())
         });
 
