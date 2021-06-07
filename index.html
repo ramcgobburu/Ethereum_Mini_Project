@@ -65,12 +65,13 @@
 		],
 		"stateMutability": "view",
 		"type": "function"
-    }],"0xABf76459e0643A8678117EA666eaE4a21A409442");
+    }],"0x15C1b56Ab9020B2E271D040c85CbCc662c609953");
 
         console.log(RemixContract);
 
         $("#setMessageButton").click(function () {
-            RemixContract.methods.setMessage($("#userInput").val());
+            var message = $("#userInput").val();
+            RemixContract.methods.setMessage(message, (error, result)=> {message = result});
             console.log($("#userInput").val())
         });
 
