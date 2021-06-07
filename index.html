@@ -39,7 +39,7 @@
         web3.eth.defaultAccount = web3.eth.accounts[0];
 
         // Get the contract address
-        var RemixContract = web3.eth.contract([
+        var RemixContract = new web3.eth.Contract([
 	{
 		"inputs": [
 			{
